@@ -16,7 +16,7 @@ Welcome to JKR Promotions Bags, your one-stop destination for bag shopping. Expl
 - [Credits](#credits)
 
 ## Usage
-To start exploring and shopping at JKR Promotions Bags, simply visit the website through the following link: [JKR Promotions Bags Website](https://jkr-bags-website.vercel.app)
+To start exploring and shopping at JKR Promotions Bags, simply visit the website through the following link: [JKR Promotions Bags Website](https://bag-central-psi.vercel.app)
 
 Please note that registration is not required to browse the products, but you'll need to create an account to make purchases.
 
