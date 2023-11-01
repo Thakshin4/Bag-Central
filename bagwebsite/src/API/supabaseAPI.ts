@@ -35,8 +35,6 @@ const register = async (email: string, password: string, first_name: string, las
   return { data, error };
 };
 
-
-
 // User login
 const signIn = async (email: string, password: string) => {
   const { data, error } = await supabase.auth.signInWithPassword({
@@ -167,6 +165,14 @@ const addOrder = async (order: unknown) => {
   return { data, error }
 };
 
+// Get orders for a specific user
+const getAllOrders = async () => {
+  const { data, error } = await supabase
+    .from('orders')
+    .select('*')
+  return { data, error };
+};
+
 const updateOrder = async(order_id: unknown, new_status: unknown) => {
   const { data, error } = await supabase.from('orders').update({ order_status: new_status }).eq('order_id', order_id).select();
   return { data, error }
@@ -227,6 +233,7 @@ export {
   updateOrder,
   addOrderItem,
   getOrders,
+  getAllOrders,
   getOrderByID,
   getOrderItems
 };

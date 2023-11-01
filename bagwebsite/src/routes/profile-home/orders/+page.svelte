@@ -20,11 +20,20 @@
 	});
 
 	async function initOrders() {
-		const { data, error } = await getOrders($USER_ID);
-		if (data) {
-			orders = data;
+		if ($USER_ROLE === 'Employee' || $USER_ROLE === 'Owner') {
+			const { data, error } = await getAllOrders();
+			if (data) {
+				orders = data;
+			} else {
+				console.error('Error fetching products:', error);
+			}
 		} else {
-			console.error('Error fetching products:', error);
+			const { data, error } = await getOrders($USER_ID);
+			if (data) {
+				orders = data;
+			} else {
+				console.error('Error fetching products:', error);
+			}
 		}
 	}
 </script>
