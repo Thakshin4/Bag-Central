@@ -42,12 +42,18 @@
 	});
 
 	function handleCheckout() {
-		handleAddOrder();
-		const payfastForm = document.getElementById('payfastForm');
-		if (payfastForm) {
-			payfastForm.submit();
+		if (subtotal > 0) {
+			handleAddOrder();
+			const payfastForm = document.getElementById('payfastForm');
+			if (payfastForm) {
+				payfastForm.submit();
+			}
+			SHOPPING_CART.set(new Map<any, any>());
 		}
-		SHOPPING_CART.set(new Map<any, any>());
+		else
+		{
+			msg = 'Order = 0'
+		}
 	}
 
 	async function handleAddOrder() {
@@ -157,7 +163,7 @@
 				<div class="card p-4 m-4">
 					<li>Address: {address}</li>
 					<li>Card: {card_id.card_number}</li>
-					<li>Subtotal: {$SUBTOTAL}</li>
+					<li>Subtotal: R {$SUBTOTAL}</li>
 				</div>
 				<form id="payfastForm" action="https://sandbox.payfast.co.za​/eng/process" method="post">
 					<input type="hidden" name="merchant_id" value="10000100" />
