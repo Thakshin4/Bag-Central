@@ -56,7 +56,7 @@
 									<h2>Order ID: {order.order_id}</h2>
 									<p>Order Date: {order.order_date}</p>
 									<p>Order Status: {order.order_status}</p>
-									<p>Subtotal: ${order.subtotal.toFixed(2)}</p>
+									<p>Subtotal: R{order.subtotal.toFixed(2)}</p>
 								</a>
 								<!-- You can add more details as needed -->
 							</div>
