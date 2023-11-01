@@ -15,4 +15,4 @@ export const PERSIST_USER_ID = persistBrowserSession(USER_ID, 'USER_ID');
 export const PERSIST_SHOPPING_CART = persistBrowserSession(SHOPPING_CART, 'SHOPPING_CART');
 
 export const APP_NAME = 'JKR Promotions Bags';
-export const APP_URL = 'https://localhost:5173/'
+export const APP_URL = 'https://bag-central-psi.vercel.app/'
