@@ -72,7 +72,7 @@
 	<!-- Page Footer -->
 	<svelte:fragment slot="footer">
 		<AppBar>
-			{APP_NAME} | 2023 | This Website was made possible thanks to
+			{APP_NAME} | Call: 0617769825 | 2023 | This Website was made possible thanks to
 			<a class="anchor" href="https://kit.svelte.dev">SvelteKit</a>,
 			<a class="anchor" href="https://www.skeleton.dev">SkeletonUI</a> and
 			<a class="anchor" href="https://supabase.com">Supabase</a>

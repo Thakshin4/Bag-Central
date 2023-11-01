@@ -1,4 +1,4 @@
-<script>
+<script lang="ts">
 	import { onMount } from 'svelte';
 	import { SHOPPING_CART } from '../../lib/global';
 	import { getProductById } from '../../API/supabaseAPI'; // Import your API function
@@ -53,6 +53,11 @@
 	function gotoCheckout() {
 		goto('/checkout');
 	}
+
+	function clearCart() {
+		SHOPPING_CART.set(new Map<any, any>());
+		goto('/products');
+	}
 </script>
 
 <!-- HTML -->
@@ -85,6 +90,9 @@
 						Subtotal: R {getSubtotal()}
 						<button type="button" class="btn variant-ghost-primary m-4" on:click={gotoCheckout}>
 							Proceed to Checkout
+						</button>
+						<button type="button" class="btn variant-ghost-error m-4" on:click={clearCart}>
+							Clear Cart
 						</button>
 					</div>
 				{/if}
