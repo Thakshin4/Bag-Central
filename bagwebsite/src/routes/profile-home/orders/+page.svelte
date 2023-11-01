@@ -2,7 +2,7 @@
 <script>
 	import { USER_ID, USER_ROLE } from '$lib/global';
 	import { ProgressRadial, RadioGroup, RadioItem } from '@skeletonlabs/skeleton';
-	import { getOrderItems, getOrders, updateOrder } from '../../../API/supabaseAPI';
+	import { getOrderItems, getOrders, getAllOrders } from '../../../API/supabaseAPI';
 	import { onMount } from 'svelte';
 
 	let isLoading = false;
