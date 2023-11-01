@@ -24,7 +24,7 @@
 
 	let address = '';
 
-	let subtotal = $SUBTOTAL;
+	let subtotal = 0;
 
 	let order_id = '';
 
@@ -42,6 +42,7 @@
 	});
 
 	function handleCheckout() {
+		subtotal = $SUBTOTAL
 		if (subtotal > 0) {
 			handleAddOrder();
 			const payfastForm = document.getElementById('payfastForm');
